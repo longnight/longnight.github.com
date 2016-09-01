@@ -1,6 +1,5 @@
 ---
 layout: blog
-published: false
-tags: ''
+published: true
 ---
 blackeyes pees song: i missing you
