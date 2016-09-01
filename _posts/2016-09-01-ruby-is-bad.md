@@ -1,5 +1,5 @@
 ---
 layout: post
-published: false
+published: true
 ---
 更改了 prose config.
