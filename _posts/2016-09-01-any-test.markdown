@@ -1,0 +1,10 @@
+---
+published: true
+layout: post
+title: Any test
+---
+## A New Post
+
+this is a any test post.
+
+From phone
