@@ -1,0 +1,6 @@
+---
+published: true
+title: Again
+layout: post
+---
+cool things
