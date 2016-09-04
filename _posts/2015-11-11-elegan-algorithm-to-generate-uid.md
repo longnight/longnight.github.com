@@ -31,6 +31,7 @@ python-dev, python2-dev, or python3.4-dev 之一；
 *libmpc-dev*；  
 *gmpy*： https://github.com/aleaxit/gmpy；  
 *libffx*： https://github.com/kpdyer/libffx (手动安装 python setup.py install )；  
+
 ```
 import ffx
  
@@ -53,7 +54,9 @@ def ffx_decrypt(uid):
     D = ffx.FFXInteger(uid, radix=10, blocksize=len(uid))
     return ffxObj.decrypt(K, D).to_int()
 ```
+
 运行例子：
+
 ```
 >>> ffx_encrypt(1002, blocksize=8)
 '24819966'

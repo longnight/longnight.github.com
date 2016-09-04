@@ -14,6 +14,7 @@ title: 记录下现实中遇到的陈列商品问题的解决思路
 有2个办法：  
 
 1，在末行补上广告图片placeholder:
+
 ```
 if n % 3 != 0:
      codes to show first placeholder img...
@@ -22,10 +23,12 @@ if n % 3 != 0:
 ```
 
 2，删除多出的一两个商品，不予展示。用函数来表达，就是已知有n个商品，求n下最大的3的倍数m，展示m个商品。  
+
 ```
 def multiple_3(n):
       while n > 2 and n % 3 != 0:
           n -= 1
       return n
 ```
+
 以上应可以用lambda一行到位，这里只是记录一下思路。

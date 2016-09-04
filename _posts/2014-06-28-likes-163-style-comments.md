@@ -42,6 +42,7 @@ def comment_blocks(qs_id, c_dict={}, sum=0):
 输入：1个字典。{1:querySet1, 2:querySet2,...}  
 返回：一个字符串。  
 `'<div class="comment"><div class="comment"><div class="comment">...</div></div>'`  
+
 ```
 def comment_blocks_html(c_dict):
     if len(c_dict) == 0:
@@ -60,6 +61,7 @@ def comment_blocks_html(c_dict):
 ```
 
 然后在Views视图中迭代使用这两个函数，输出该页内容（所有评论）的html代码，直接通过context交给Templates。
+
 ```
 def index(request):
     c = Comments.objects.all().order_by('-id')
@@ -72,6 +74,7 @@ def index(request):
     context = {'c_list': c, 'addcomform': addcomform, 'html_block': html_block}
     return render_to_response('index.html', context, context_instance=RequestContext(request))
 ```
+
 以下为效果图，其中每条评论的第1个数字为自身id，第2个数字为目标（被引用者）的id。
 
 ![163comment]({{baseurl}}/images/2014-06-28-likes-163-style-comments.jpg)

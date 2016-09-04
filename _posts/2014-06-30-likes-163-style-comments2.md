@@ -10,6 +10,7 @@ title: 163 网易评论的无限嵌套 代码样例 之 2
 下面附上代码和效果：  
  
 递归函数：  
+
 ```
 def mult_div_qs(qs_id, mdq_dict={}, sum=0, qs_list=[]):
     c = Comments.objects.all()
@@ -29,7 +30,9 @@ def mult_div_qs(qs_id, mdq_dict={}, sum=0, qs_list=[]):
             qs_id = qs.quote_who
             return mult_div_qs(qs_id, mdq_dict, sum, qs_list)
 ```
+
 view 的代码:  
+
 ```
 def index(request):
     c = Comments.objects.all().order_by('-id')
@@ -43,6 +46,7 @@ def index(request):
 ```
 
 Template那边的代码（注意要加上autoescape off）:  
+
 ```
 {% raw %}
 {% for i in qs_list %}
@@ -59,5 +63,6 @@ Template那边的代码（注意要加上autoescape off）:
 {% endfor %}
 {% endraw %}
 ```
+
 这样，通过递归思想，寥寥几十行就完成了很多程序无法做到的嵌套效果。  
 并且模版系统接收到的数据是完整可迭代的queryset，也就意味着随意使用了。  
