@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 ---
 WebSocket consumers
@@ -48,7 +48,7 @@ def ws_receive(message):
         # See above for the note about Group
         Group('chat-'+label, channel_layer=message.channel_layer).send(
             {'text': json.dumps(data)})
-            
+
 ```
 
-  
+
