@@ -21,16 +21,11 @@
 				<nav class="nav-global">
 					<ul>
 						<li class="logo"><a href="/">{{ site.title }}</a></li>
+						<li>anything about coding</li>
 						<!-- <li class="archive"><a href="/archive.html">archive</a></li>
 						<li class="page"><a href="/pages.html">pages</a></li>
 						<li class="category"><a href="/categories.html">categories</a></li>
 						<li class="tag"><a href="/tags.html">tags</a></li> -->
-						{% for post in site.posts %}
-						<li>
-							<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-						</li>
-						{% endfor %}
-
 					</ul>
 				</nav>
 			</div><!-- unit-inner -->
@@ -51,14 +46,19 @@
 				<div class="misc vcard">
 					<h4>about</h4>
 					<ul>
-						<li class="contact"><address><span class="author fn n">{{ site.author.name }}</span> - <span class="fn email">{{ site.author.email }}</span></address></li>
+						<li>研究互联网和信息传播</li>
 						<li class="github"><a href="http://github.com/{{ site.author.github }}/" rel="me">github.com/{{ site.author.github }}</a></li>
+
 					</ul>
+					<h5>Recent post:</h5>
+						{% for post in site.posts %}
+						<span class="archive">
+							<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+						</span><br>
+						{% endfor %}
+
 				</div><!-- misc -->
-				<p class="licence">
-					Theme: <a href="http://layouts-the.me">the_minimum</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
-					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
-				</p>
+
 			</div><!-- unit-foot-inner -->
 		</div><!-- unit-foot -->
 	</footer>
