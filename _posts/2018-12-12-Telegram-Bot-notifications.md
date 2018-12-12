@@ -47,5 +47,6 @@ bot.send_message("YOUR CHAT_ID", text)
 
 就是这么简单了!
 最后,应参考[telegram bot 的官方 api](https://core.telegram.org/bots/api), 看看是否用得上多媒体/图片/声音/HTML/markdown 等参数, 按照自己实际需求定义个函数包裹一下.
+需要提醒的是, 如果发送html格式的话, 能用的tag有限, 而且不能嵌套tag, 还是参考api 文档吧!
 事情就是这么简单,且又好使. 微信那边要实现类似功能,得用公司资质申请个啥服务号, 每年300元, 不便宜又有风险.
 Telegram 结合channels，group，bot，构成了一个极其多样化并且提供强大能力的平台，除开被墙这个因素，很值得自媒体从业人员和开发者投入精力。
